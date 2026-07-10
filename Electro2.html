@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Основи електротехніки. 100 питань</title>
+
+<style>
+/* Налаштування для друку */
+@page {
+    size: A4;
+    margin: 0; /* Відступи задані в класі .page */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8edf3;
+    margin: 0;
+    padding: 20px 0;
+    color: #222;
+    line-height: 1.6;
+    /* Ініціалізація лічильника сторінок */
+    counter-reset: pageNumber;
+}
+
+/* Оформлення аркуша А4 */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 30px auto;
+    background: #fff;
+    padding: 20mm 20mm 25mm 20mm;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Тінь для вигляду аркуша на екрані */
+    page-break-after: always; /* Розрив сторінки при друку */
+}
+
+/* Блок нумерації сторінок */
+.page-num {
+    position: absolute;
+    bottom: 12mm;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+.page-num::before {
+    counter-increment: pageNumber;
+    content: "- " counter(pageNumber) " -";
+}
+
+/* Прибираємо тіні та фони під час друку */
+@media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0; border: none; }
+}
+
+h1 { color: #0D47A1; text-align: center; }
+h2 { color: #1565C0; border-left: 8px solid #1565C0; padding-left: 10px; }
+
+.question { background: #E3F2FD; border-left: 6px solid #1976D2; padding: 12px; margin-top: 18px; font-weight: bold; }
+.answer { background: #E8F5E9; border-left: 6px solid #43A047; padding: 12px; margin-bottom: 18px; }
+.note { background: #FFF8E1; border-left: 6px solid #F9A825; padding: 10px; margin-top: 10px; }
+.footer { text-align: center; color: #666; margin-top: 40px; }
+
+</style>
+</head>
+<body>
+
+<!-- СТОРІНКА 1 -->
+<div class="page">
+    <h1>ОСНОВИ ЕЛЕКТРОТЕХНІКИ</h1>
+    <h2>Розділ 1</h2>
+    <h2>Основні електричні величини</h2>
+    <p>У цьому розділі розглядаються базові поняття електротехніки, без яких неможливо зрозуміти роботу електричних кіл.</p>
+    <hr>
+
+    <div class="question">1. Що таке електричний струм?</div>
+    <div class="answer">Електричний струм — це впорядкований рух електрично заряджених частинок під дією електричного поля.</div>
+
+    <div class="question">2. Яка різниця між постійним і змінним струмом?</div>
+    <div class="answer">Постійний струм рухається лише в одному напрямку, а змінний періодично змінює напрямок і величину.</div>
+
+    <div class="question">3. Що таке електрична напруга?</div>
+    <div class="answer">Напруга — це різниця електричних потенціалів між двома точками електричного кола.</div>
+
+    <div class="question">4. У яких одиницях вимірюється напруга?</div>
+    <div class="answer">Напруга вимірюється у вольтах (В).</div>
+
+    <div class="question">5. Що таке сила струму?</div>
+    <div class="answer">Сила струму показує кількість електричного заряду, що проходить через поперечний переріз провідника за одну секунду.</div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 2 -->
+<div class="page">
+    <div class="note">
+        <b>Запам'ятайте:</b><br>
+        Напруга — вимірюється у Вольтах (В).<br>
+        Струм — в Амперах (А).<br>
+        Опір — в Омах (Ω).<br>
+        Потужність — у Ватах (Вт).
+    </div>
+
+    <div class="question">6. У яких одиницях вимірюється сила струму?</div>
+    <div class="answer">Сила струму вимірюється в амперах (А).</div>
+
+    <div class="question">7. Що таке електричний опір?</div>
+    <div class="answer">Електричний опір — це властивість провідника перешкоджати проходженню електричного струму.</div>
+
+    <div class="question">8. Від чого залежить опір провідника?</div>
+    <div class="answer">Опір залежить від матеріалу провідника, його довжини, площі поперечного перерізу та температури.</div>
+
+    <div class="question">9. Сформулюйте закон Ома.</div>
+    <div class="answer">
+        Сила струму прямо пропорційна напрузі та обернено пропорційна опору.<br><br>
+        <b>Формула:</b>
+        <div style="font-size:22px;text-align:center;color:#0D47A1;">I = U / R</div>
+    </div>
+
+    <div class="question">10. Як обчислити силу струму за законом Ома?</div>
+    <div class="answer">
+        Щоб визначити силу струму, потрібно напругу поділити на опір.<br><br>
+        <b>Приклад:</b><br>
+        U = 220 В<br>
+        R = 110 Ом<br><br>
+        <div style="background:#E3F2FD;padding:10px;border-left:5px solid #1976D2;">
+            I = 220 / 110 = <b>2 А</b>
+        </div>
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 3 -->
+<div class="page">
+    <div class="question">11. Як визначити напругу за законом Ома?</div>
+    <div class="answer">
+        Напруга дорівнює добутку сили струму на опір.<br><br>
+        <div style="background:#E3F2FD;padding:10px;border-left:5px solid #1976D2;">
+            <b>Формула:</b><br>
+            <div style="font-size:22px;text-align:center;color:#0D47A1;">U = I × R</div>
+        </div>
+        <b>Приклад:</b><br>
+        I = 5 А<br>
+        R = 20 Ом<br><br>
+        <div style="background:#FFF3E0;padding:10px;border-left:5px solid #F57C00;">
+            U = 5 × 20 = <b>100 В</b>
+        </div>
+    </div>
+
+    <div class="question">12. Як визначити опір за законом Ома?</div>
+    <div class="answer">
+        Опір визначають діленням напруги на силу струму.
+        <div style="background:#E3F2FD;padding:10px;border-left:5px solid #1976D2;">
+            <b>Формула:</b><br>
+            <div style="font-size:22px;text-align:center;color:#0D47A1;">R = U / I</div>
+        </div>
+        <b>Приклад:</b><br>
+        U = 230 В<br>
+        I = 10 А<br><br>
+        <div style="background:#FFF3E0;padding:10px;border-left:5px solid #F57C00;">
+            R = 230 / 10 = <b>23 Ом</b>
+        </div>
+    </div>
+
+    <div class="question">13. Що таке електрична потужність?</div>
+    <div class="answer">
+        Електрична потужність характеризує швидкість споживання або передачі електричної енергії.
+        <div style="background:#E8F5E9;padding:10px;border-left:5px solid #43A047;">
+            Чим більша потужність, тим більше електроенергії споживає прилад за одиницю часу.
+        </div>
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 4 -->
+<div class="page">
+    <div class="question">14. За якою формулою обчислюється електрична потужність?</div>
+    <div class="answer">
+        <div style="background:#E3F2FD;padding:10px;border-left:5px solid #1976D2;">
+            <div style="font-size:22px;text-align:center;color:#0D47A1;">P = U × I</div>
+        </div>
+        <b>Приклад:</b><br>
+        U = 220 В<br>
+        I = 2 А<br><br>
+        <div style="background:#FFF3E0;padding:10px;border-left:5px solid #F57C00;">
+            P = 220 × 2 = <b>440 Вт</b>
+        </div>
+    </div>
+
+    <div class="question">15. У яких одиницях вимірюється потужність?</div>
+    <div class="answer">
+        Потужність вимірюється у <b>ватах (Вт)</b>.
+        Для великих значень використовують:
+        <ul>
+            <li>1 кВт = 1000 Вт</li>
+            <li>1 МВт = 1000 кВт</li>
+            <li>1 ГВт = 1000 МВт</li>
+        </ul>
+    </div>
+
+    <div style="background:#FFF8E1; border-left:6px solid #F9A825; padding:15px; margin-top:20px;">
+        <b>Основні формули розділу</b>
+        <ul>
+            <li><b>I = U / R</b></li>
+            <li><b>U = I × R</b></li>
+            <li><b>R = U / I</b></li>
+            <li><b>P = U × I</b></li>
+        </ul>
+    </div>
+
+    <div class="question">16. Що таке електрична енергія?</div>
+    <div class="answer">
+        Електрична енергія — це робота, яку виконує електричний струм за певний проміжок часу.
+        <div style="background:#E8F5E9;padding:10px;border-left:5px solid #43A047;">
+            Електроенергію обліковують лічильниками та оплачують у кіловат-годинах (кВт·год).
+        </div>
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 5 -->
+<div class="page">
+    <div class="question">17. Як обчислюється спожита електроенергія?</div>
+    <div class="answer">
+        Спожита електроенергія визначається як добуток потужності на час роботи.
+        <div style="background:#E3F2FD;padding:10px;border-left:5px solid #1976D2;">
+            <div style="font-size:22px;text-align:center;color:#0D47A1;">W = P × t</div>
+        </div>
+        <b>Приклад:</b><br>
+        Електрообігрівач потужністю <b>2 кВт</b> працював <b>3 години</b>.
+        <div style="background:#FFF3E0;padding:10px;border-left:5px solid #F57C00;">
+            W = 2 × 3 = <b>6 кВт·год</b>
+        </div>
+    </div>
+
+    <div class="question">18. Що таке провідник?</div>
+    <div class="answer">
+        Провідник — це матеріал, який добре проводить електричний струм завдяки великій кількості вільних електронів.
+        <b>Приклади:</b>
+        <ul><li>Мідь</li><li>Алюміній</li><li>Срібло</li><li>Золото</li></ul>
+    </div>
+
+    <div class="question">19. Що таке ізолятор?</div>
+    <div class="answer">
+        Ізолятор — це матеріал, який практично не проводить електричний струм.
+        <b>Приклади:</b>
+        <ul><li>Гума</li><li>Пластмаса</li><li>Скло</li><li>Фарфор</li><li>Суха деревина</li></ul>
+    </div>
+
+    <div class="question">20. Які матеріали є добрими провідниками електричного струму?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;margin-top:10px;">
+            <tr style="background:#1976D2;color:white;">
+                <th style="padding:8px;border:1px solid #ccc;">Матеріал</th>
+                <th style="padding:8px;border:1px solid #ccc;">Застосування</th>
+            </tr>
+            <tr><td style="padding:8px;border:1px solid #ccc;">Мідь</td><td style="padding:8px;border:1px solid #ccc;">Електропроводка, кабелі</td></tr>
+            <tr style="background:#F8F9FA;"><td style="padding:8px;border:1px solid #ccc;">Алюміній</td><td style="padding:8px;border:1px solid #ccc;">Повітряні лінії</td></tr>
+            <tr><td style="padding:8px;border:1px solid #ccc;">Срібло</td><td style="padding:8px;border:1px solid #ccc;">Електроніка, контакти</td></tr>
+            <tr style="background:#F8F9FA;"><td style="padding:8px;border:1px solid #ccc;">Золото</td><td style="padding:8px;border:1px solid #ccc;">Якісні контакти</td></tr>
+        </table>
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 6 -->
+<div class="page">
+    <div style="background:#0D47A1;color:white;padding:20px;border-radius:8px;">
+        <h3 style="margin-top:0;color:white;">Підсумок розділу 1</h3>
+        <p>Після вивчення цього розділу ви повинні знати:</p>
+        <ul>
+            <li>що таке струм, напруга та опір;</li>
+            <li>закон Ома та його формули;</li>
+            <li>що таке потужність і електроенергія;</li>
+            <li>різницю між провідниками та ізоляторами;</li>
+        </ul>
+    </div>
+
+    <h1 style="color:#0D47A1; margin-top: 30px;">Розділ 2</h1>
+    <h2 style="color:#1565C0;">Електричні кола та джерела живлення</h2>
+
+    <div class="question">21. Що таке електричне коло?</div>
+    <div class="answer">
+        Електричне коло — це сукупність елементів, з'єднаних між собою таким чином, щоб по них міг проходити електричний струм.
+    </div>
+
+    <div class="question">22. Які основні елементи електричного кола?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;">
+            <tr style="background:#1976D2;color:white;">
+                <th>Елемент</th><th>Призначення</th>
+            </tr>
+            <tr><td style="padding:8px;border:1px solid #ccc;">Джерело живлення</td><td style="padding:8px;border:1px solid #ccc;">Створює електричну енергію</td></tr>
+            <tr style="background:#F5F5F5;"><td style="padding:8px;border:1px solid #ccc;">Провідники</td><td style="padding:8px;border:1px solid #ccc;">Передають струм</td></tr>
+            <tr><td style="padding:8px;border:1px solid #ccc;">Споживач</td><td style="padding:8px;border:1px solid #ccc;">Перетворює електроенергію</td></tr>
+            <tr style="background:#F5F5F5;"><td style="padding:8px;border:1px solid #ccc;">Вимикач</td><td style="padding:8px;border:1px solid #ccc;">Керує колом</td></tr>
+        </table>
+    </div>
+
+    <div class="question">23. Що таке джерело живлення?</div>
+    <div class="answer">
+        Джерело живлення — це пристрій, який створює електричну напругу та забезпечує рух струму в електричному колі. (батарейка, генератор, блок живлення).
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 7 -->
+<div class="page">
+    <div class="question">24. Які існують джерела електричної енергії?</div>
+    <div class="answer">
+        <ul>
+            <li>Хімічні (батарейки, акумулятори).</li>
+            <li>Електромеханічні (генератори).</li>
+            <li>Фотоелектричні (сонячні панелі).</li>
+            <li>Термоелектричні.</li>
+        </ul>
+    </div>
+
+    <div class="question">25. Що таке електрорушійна сила (ЕРС)?</div>
+    <div class="answer">
+        ЕРС — це величина, що характеризує здатність джерела живлення створювати електричний струм у замкненому колі.
+        <div style="background:#FFF8E1; padding:12px; border-left:6px solid #F9A825;">
+            <b>Позначення:</b> E <br><b>Одиниця вимірювання:</b> Вольт (В)
+        </div>
+    </div>
+
+    <div class="question">26. Що таке замкнуте електричне коло?</div>
+    <div class="answer">
+        Замкнуте електричне коло — це коло, в якому існує безперервний шлях для проходження електричного струму від джерела живлення через споживач і назад.
+        <div style="background:#E8F5E9;padding:10px;border-left:5px solid #43A047;"><b>Приклад:</b> Увімкнена лампа.</div>
+    </div>
+
+    <div class="question">27. Що таке розімкнуте електричне коло?</div>
+    <div class="answer">
+        Розімкнуте коло — це коло, в якому струм не протікає через розрив провідника або вимкнений вимикач.
+    </div>
+
+    <div class="question">28. Що таке коротке замикання?</div>
+    <div class="answer">
+        Коротке замикання — це аварійний режим роботи, коли між точками з різними потенціалами виникає з'єднання з дуже малим опором.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 8 -->
+<div class="page">
+    <div class="question">29. Чому коротке замикання є небезпечним?</div>
+    <div class="answer">
+        Під час короткого замикання струм може у десятки або сотні разів перевищувати номінальний. Це може призвести до плавлення ізоляції, пожежі та руйнування обладнання.
+    </div>
+
+    <div class="question">30. Які способи захисту від короткого замикання?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;">
+            <tr style="background:#1976D2;color:white;">
+                <th>Пристрій</th><th>Призначення</th>
+            </tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Плавкий запобіжник</td><td style="border:1px solid #ccc;padding:8px;">Перегорає при перевищенні струму</td></tr>
+            <tr style="background:#F5F5F5;"><td style="border:1px solid #ccc;padding:8px;">Автоматичний вимикач</td><td style="border:1px solid #ccc;padding:8px;">Автоматично вимикає живлення</td></tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Диференційний автомат</td><td style="border:1px solid #ccc;padding:8px;">Захищає від перевантаження, КЗ та витоку струму</td></tr>
+        </table>
+    </div>
+
+    <div class="question">31. Для чого застосовують плавкі запобіжники?</div>
+    <div class="answer">
+        Плавкі запобіжники захищають електричне коло від надмірного струму. При перевищенні допустимого струму плавка вставка перегорає.
+    </div>
+
+    <div class="question">32. Як працює автоматичний вимикач?</div>
+    <div class="answer">
+        Автоматичний вимикач автоматично вимикає живлення при перевантаженні або короткому замиканні.
+    </div>
+
+    <div class="question">33. Що таке перевантаження електричного кола?</div>
+    <div class="answer">
+        Перевантаження виникає тоді, коли сила струму перевищує допустиме значення протягом тривалого часу.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 9 -->
+<div class="page">
+    <div class="question">34. Що таке захисне заземлення?</div>
+    <div class="answer">
+        Захисне заземлення — це навмисне електричне з'єднання металевих корпусів електрообладнання із землею.
+    </div>
+
+    <div class="question">35. Для чого потрібне заземлення?</div>
+    <div class="answer">
+        Заземлення відводить небезпечний струм у землю при пошкодженні ізоляції, захищаючи людину від ураження струмом.
+    </div>
+
+    <div class="question">36. Що таке занулення?</div>
+    <div class="answer">
+        Занулення — це приєднання металевих корпусів електрообладнання до нульового захисного провідника, що викликає спрацювання автомата при пробої.
+    </div>
+
+    <div class="question">37. Чим відрізняється заземлення від занулення?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;">
+            <tr style="background:#1976D2;color:white;">
+                <th>Заземлення</th><th>Занулення</th>
+            </tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Підключення до контуру землі</td><td style="border:1px solid #ccc;padding:8px;">Підключення до PE або PEN</td></tr>
+            <tr style="background:#F5F5F5;"><td style="border:1px solid #ccc;padding:8px;">Відводить струм у землю</td><td style="border:1px solid #ccc;padding:8px;">Викликає КЗ для спрацювання автомата</td></tr>
+        </table>
+    </div>
+
+    <div class="question">38. Що таке ПЗВ (УЗО)?</div>
+    <div class="answer">
+        Пристрій захисного вимкнення (ПЗВ) контролює струм витоку та автоматично відключає живлення (не захищає від КЗ!).
+    </div>
+
+    <div class="question">39. Що таке диференційний автомат?</div>
+    <div class="answer">
+        Диференційний автомат поєднує функції автоматичного вимикача та ПЗВ (захист від КЗ, перевантаження та струму витоку).
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 10 -->
+<div class="page">
+    <div class="question">40. Які основні правила експлуатації електричних кіл?</div>
+    <div class="answer">
+        <ul>
+            <li>не перевантажуйте електромережу;</li>
+            <li>використовуйте справні кабелі;</li>
+            <li>не торкайтеся оголених провідників;</li>
+            <li>застосовуйте автомати та ПЗВ.</li>
+        </ul>
+    </div>
+
+    <div style="background:#0D47A1;color:white;padding:20px;border-radius:8px; margin-bottom: 30px;">
+        <h3 style="color:white;margin-top:0;">Підсумок розділу 2</h3>
+        <ul>
+            <li>Вивчено будову електричного кола та джерела.</li>
+            <li>Пояснено коротке замикання та перевантаження.</li>
+            <li>Вивчено призначення заземлення, занулення та ПЗВ.</li>
+        </ul>
+    </div>
+
+    <h1 style="color:#0D47A1;">Розділ 3</h1>
+    <h2 style="color:#1565C0;">Електромагнетизм і магнітні явища</h2>
+
+    <div class="question">41. Що таке магнітне поле?</div>
+    <div class="answer">
+        Магнітне поле — це особлива форма матерії, яка виникає навколо магнітів та провідників зі струмом і діє на рухомі електричні заряди.
+    </div>
+
+    <div class="question">42. Які властивості має магнітне поле?</div>
+    <div class="answer">
+        <ul>
+            <li>утворюється навколо провідника зі струмом;</li>
+            <li>має силові лінії;</li>
+            <li>діє на магніти та провідники зі струмом;</li>
+        </ul>
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 11 -->
+<div class="page">
+    <div class="question">43. Що таке електромагніт?</div>
+    <div class="answer">
+        Електромагніт — це котушка з проводу, по якій проходить електричний струм, часто намотана на сталевий осердок.
+    </div>
+
+    <div class="question">44. Де застосовуються електромагніти?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;">
+            <tr style="background:#1976D2;color:white;">
+                <th>Пристрій</th><th>Призначення</th>
+            </tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Реле</td><td style="border:1px solid #ccc;padding:8px;">Комутація електричних кіл</td></tr>
+            <tr style="background:#F5F5F5;"><td style="border:1px solid #ccc;padding:8px;">Електродвигун</td><td style="border:1px solid #ccc;padding:8px;">Створення обертального моменту</td></tr>
+        </table>
+    </div>
+
+    <div class="question">45. Як працює електромагніт?</div>
+    <div class="answer">
+        Після проходження струму через котушку виникає магнітне поле, яке намагнічує осердя та створює силу притягання.
+    </div>
+
+    <div class="question">46. Що таке електромагнітна індукція?</div>
+    <div class="answer">
+        Електромагнітна індукція — це явище виникнення електрорушійної сили (ЕРС) у провіднику при зміні магнітного поля (основа роботи генераторів).
+    </div>
+
+    <div class="question">47. Хто відкрив явище електромагнітної індукції?</div>
+    <div class="answer">
+        Явище електромагнітної індукції відкрив англійський фізик <b>Майкл Фарадей</b> у 1831 році.
+    </div>
+
+    <div class="question">48. Що таке індуктивність?</div>
+    <div class="answer">
+        Індуктивність — це властивість кола створювати ЕРС самоіндукції при зміні струму. (Одиниця — Генрі, Гн).
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 12 -->
+<div class="page">
+    <div class="question">49. Для чого застосовують котушки індуктивності?</div>
+    <div class="answer">
+        Котушки використовують для накопичення енергії магнітного поля, фільтрації сигналів, роботи трансформаторів.
+    </div>
+
+    <div class="question">50. Що таке самоіндукція?</div>
+    <div class="answer">
+        Самоіндукція — це виникнення ЕРС у тому самому провіднику або котушці, де змінюється струм. Вона перешкоджає різкій зміні сили струму.
+    </div>
+
+    <div class="question">51. Що таке конденсатор?</div>
+    <div class="answer">
+        Конденсатор — це електричний елемент, призначений для накопичення електричного заряду та енергії електричного поля.
+    </div>
+
+    <div class="question">52. З яких основних частин складається конденсатор?</div>
+    <div class="answer">
+        Конденсатор складається з двох металевих обкладок та діелектрика (папір, кераміка, слюда) між ними.
+    </div>
+
+    <div class="question">53. У яких одиницях вимірюється ємність конденсатора?</div>
+    <div class="answer">
+        Ємність вимірюється у <b>фарадах (Ф)</b>. Найчастіше використовують мікрофаради (мкФ), нанофаради (нФ) та пікофаради (пФ).
+    </div>
+
+    <div class="question">54. Для чого використовують конденсатори?</div>
+    <div class="answer">
+        Конденсатори застосовують для фільтрації пульсацій напруги, пуску електродвигунів, компенсації реактивної потужності.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 13 -->
+<div class="page">
+    <div class="question">55. Що таке трансформатор?</div>
+    <div class="answer">
+        Трансформатор — це електромагнітний пристрій, який змінює величину змінної напруги без зміни її частоти. Складається з магнітопроводу та обмоток.
+    </div>
+
+    <div class="question">56. Як працює трансформатор?</div>
+    <div class="answer">
+        Трансформатор працює на основі електромагнітної індукції: змінний струм у первинній обмотці створює магнітний потік, який індукує напругу у вторинній обмотці.
+    </div>
+
+    <div class="question">57. Що таке коефіцієнт трансформації?</div>
+    <div class="answer">
+        Коефіцієнт трансформації показує, у скільки разів змінюється напруга. <b>k = U₁ / U₂</b>.
+    </div>
+
+    <div class="question">58. Які бувають трансформатори?</div>
+    <div class="answer">
+        <table style="width:100%;border-collapse:collapse;">
+            <tr style="background:#1976D2;color:white;">
+                <th>Тип</th><th>Призначення</th>
+            </tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Підвищувальний</td><td style="border:1px solid #ccc;padding:8px;">Підвищує напругу</td></tr>
+            <tr style="background:#F5F5F5;"><td style="border:1px solid #ccc;padding:8px;">Понижувальний</td><td style="border:1px solid #ccc;padding:8px;">Знижує напругу</td></tr>
+            <tr><td style="border:1px solid #ccc;padding:8px;">Вимірювальний</td><td style="border:1px solid #ccc;padding:8px;">Для вимірювання струму та напруги</td></tr>
+        </table>
+    </div>
+
+    <div class="question">59. Які втрати енергії виникають у трансформаторі?</div>
+    <div class="answer">
+        Основні втрати виникають на нагрівання обмоток, від вихрових струмів та через гістерезис магнітного осердя.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 14 -->
+<div class="page">
+    <div class="question">60. Що таке коефіцієнт корисної дії (ККД) трансформатора?</div>
+    <div class="answer">
+        ККД показує, яка частина підведеної електричної енергії передається споживачу. У сучасних силових трансформаторів ККД досягає <b>95–99%</b>.
+    </div>
+
+    <div style="background:#0D47A1;color:white;padding:20px;border-radius:8px; margin-bottom: 30px;">
+        <h3 style="margin-top:0;color:white;">Підсумок розділу 3</h3>
+        <ul>
+            <li>Трансформатор працює тільки на змінному струмі.</li>
+            <li>Його робота ґрунтується на електромагнітній індукції.</li>
+        </ul>
+    </div>
+
+    <h1 style="color:#0D47A1;">Розділ 4</h1>
+    <h2 style="color:#1565C0;">Однофазні та трифазні електричні мережі</h2>
+
+    <div class="question">61. Що таке однофазна електрична мережа?</div>
+    <div class="answer">
+        Однофазна мережа — це мережа, у якій електроенергія передається по одному фазному та одному нейтральному провіднику.
+    </div>
+
+    <div class="question">62. Яка стандартна напруга однофазної мережі?</div>
+    <div class="answer">
+        В Україні стандартна напруга однофазної мережі становить <b>230 В</b> при частоті <b>50 Гц</b>.
+    </div>
+
+    <div class="question">63. Що таке трифазна електрична мережа?</div>
+    <div class="answer">
+        Трифазна мережа складається з трьох фазних провідників, зміщених між собою на 120°. Використовується для потужного обладнання.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 15 -->
+<div class="page">
+    <div class="question">64. Яка напруга трифазної мережі?</div>
+    <div class="answer">
+        Фазна напруга (між фазою та нулем) — 230 В. Лінійна напруга (між двома фазами) — 400 В.
+    </div>
+
+    <div class="question">65. У чому переваги трифазної мережі?</div>
+    <div class="answer">
+        Переваги: можливість передавати більшу потужність, менші втрати, ефективна робота електродвигунів.
+    </div>
+
+    <div class="question">66. Що таке фазний провідник?</div>
+    <div class="answer">
+        Фазний провідник (<b>L</b>) призначений для передачі електричної енергії. На ньому знаходиться небезпечна для людини напруга.
+    </div>
+
+    <div class="question">67. Що таке нейтральний провідник?</div>
+    <div class="answer">
+        Нейтральний провідник (<b>N</b>) забезпечує повернення струму до джерела живлення.
+    </div>
+
+    <div class="question">68. Для чого потрібен захисний провідник PE?</div>
+    <div class="answer">
+        Захисний провідник (<b>PE</b>) використовується для заземлення корпусів електрообладнання (для захисту від струму).
+    </div>
+
+    <div class="question">69. Яке кольорове маркування мають провідники?</div>
+    <div class="answer">
+        <b>L (фаза)</b> — коричневий/чорний; <b>N (нуль)</b> — блакитний; <b>PE (заземлення)</b> — жовто-зелений.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 16 -->
+<div class="page">
+    <div class="question">70. Які схеми з'єднання використовують у трифазних мережах?</div>
+    <div class="answer">
+        <ul>
+            <li><b>Зірка (Y)</b> — є нейтральний провідник.</li>
+            <li><b>Трикутник (Δ)</b> — нейтраль відсутня, обмотки з'єднані послідовно по колу.</li>
+        </ul>
+    </div>
+
+    <div class="question">71. Що таке послідовне з'єднання провідників?</div>
+    <div class="answer">
+        При послідовному з'єднанні елементи розташовані один за одним, струм проходить через кожний елемент однаково.
+    </div>
+
+    <div class="question">72. Які властивості має послідовне з'єднання?</div>
+    <div class="answer">
+        Струм однаковий (I=const), напруга розподіляється (U=U₁+U₂+U₃), загальний опір додається (<b>R = R₁ + R₂ + R₃</b>).
+    </div>
+
+    <div class="question">73. Що таке паралельне з'єднання провідників?</div>
+    <div class="answer">
+        З'єднання, при якому всі споживачі підключаються до одних і тих самих двох точок (так підключаються побутові прилади).
+    </div>
+
+    <div class="question">74. Які властивості має паралельне з'єднання?</div>
+    <div class="answer">
+        Напруга однакова (U=const), струм розгалужується (I=I₁+I₂+I₃), загальний опір зменшується (<b>1/R = 1/R₁ + 1/R₂ + 1/R₃</b>).
+    </div>
+
+    <div class="question">75. Чому в побуті застосовують паралельне з'єднання?</div>
+    <div class="answer">
+        Кожний прилад працює незалежно. Вимкнення одного приладу не впливає на роботу інших.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 17 -->
+<div class="page">
+    <div class="question">76. Що таке мультиметр?</div>
+    <div class="answer">
+        Мультиметр — це універсальний електровимірювальний прилад, для вимірювання напруги, струму та опору.
+    </div>
+
+    <div class="question">77. Як правильно вимірювати напругу мультиметром?</div>
+    <div class="answer">
+        Для вимірювання напруги мультиметр підключають <b>паралельно</b> до споживача або джерела струму.
+    </div>
+
+    <div class="question">78. Як вимірюють силу струму?</div>
+    <div class="answer">
+        Силу струму вимірюють шляхом <b>послідовного</b> підключення мультиметра у розрив електричного кола.
+    </div>
+
+    <div class="question">79. Як вимірюють електричний опір?</div>
+    <div class="answer">
+        Опір вимірюють <b>лише при вимкненому живленні</b>, підключивши щупи безпосередньо до елемента.
+    </div>
+
+    <div class="question">80. Що таке струмові кліщі?</div>
+    <div class="answer">
+        Прилад, який дозволяє безпечно вимірювати силу струму без розриву електричного кола (охоплюючи провід).
+    </div>
+
+    <h1 style="color:#0D47A1; margin-top: 30px;">Розділ 5</h1>
+    <h2 style="color:#1565C0;">Електробезпека та електричні машини</h2>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 18 -->
+<div class="page">
+    <div class="question">81. Що таке коефіцієнт потужності (cos φ)?</div>
+    <div class="answer">
+        Коефіцієнт потужності (cos φ) показує ефективність використання електричної енергії споживачем (чим ближче до 1, тим краще).
+    </div>
+
+    <div class="question">82. Що таке активна потужність?</div>
+    <div class="answer">
+        Активна потужність — це потужність, яка виконує корисну роботу. Вимірюється у <b>Ватах (Вт)</b>.
+    </div>
+
+    <div class="question">83. Що таке реактивна потужність?</div>
+    <div class="answer">
+        Виникає в колах з індуктивністю або ємністю та не виконує корисної роботи. Вимірюється у <b>варах (вар)</b>.
+    </div>
+
+    <div class="question">84. Що таке повна потужність?</div>
+    <div class="answer">
+        Повна потужність є сумою активної та реактивної потужностей. Вимірюється у <b>вольт-амперах (ВА)</b>.
+    </div>
+
+    <div class="question">85. Чому реактивну потужність бажано компенсувати?</div>
+    <div class="answer">
+        Компенсація зменшує навантаження на мережу та втрати електроенергії. Використовують батареї конденсаторів.
+    </div>
+
+    <div class="question">86. Які бувають електродвигуни?</div>
+    <div class="answer">
+        Поділяються на: двигуни постійного струму, асинхронні двигуни, синхронні двигуни.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 19 -->
+<div class="page">
+    <div class="question">87. Як працює асинхронний електродвигун?</div>
+    <div class="answer">
+        Асинхронний двигун працює за принципом взаємодії обертового магнітного поля статора зі струмами у роторі.
+    </div>
+
+    <div class="question">88. Що таке синхронний електродвигун?</div>
+    <div class="answer">
+        Двигун, швидкість обертання ротора якого дорівнює швидкості обертання магнітного поля статора.
+    </div>
+
+    <div class="question">89. Що таке генератор електричного струму?</div>
+    <div class="answer">
+        Генератор — це електрична машина, яка перетворює механічну енергію в електричну.
+    </div>
+
+    <div class="question">90. Як працює генератор?</div>
+    <div class="answer">
+        Обертається ротор, змінюється магнітний потік, і завдяки електромагнітній індукції у статорі виникає електрична напруга.
+    </div>
+
+    <div class="question">91. Які основні правила електробезпеки?</div>
+    <div class="answer">
+        Працювати справним інструментом, використовувати засоби захисту, знімати напругу перед ремонтом, не торкатись оголених проводів.
+    </div>
+
+    <div class="question">92. Які засоби індивідуального захисту використовують електромонтери?</div>
+    <div class="answer">
+        Діелектричні рукавички, гумове взуття, захисна каска, окуляри, діелектричний килимок, ізольований інструмент.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 20 -->
+<div class="page">
+    <div class="question">93. Чому небезпечно торкатися оголених провідників?</div>
+    <div class="answer">
+        Це призводить до проходження електричного струму через тіло. Наслідки: опіки, судоми, порушення серця, смерть.
+    </div>
+
+    <div class="question">94. Як діяти при ураженні людини електричним струмом?</div>
+    <div class="answer">
+        Вимкнути електроживлення -> звільнити потерпілого (безпечно для себе) -> викликати швидку -> за потреби почати реанімацію.
+    </div>
+
+    <div class="question">95. Що таке ступінь захисту IP?</div>
+    <div class="answer">
+        <b>IP (Ingress Protection)</b> показує рівень захисту обладнання від проникнення твердих предметів (пилу) та води.
+    </div>
+
+    <div class="question">96. Як розшифровується маркування IP54?</div>
+    <div class="answer">
+        <b>5</b> — захист від пилу, <b>4</b> — захист від бризок води.
+    </div>
+
+    <div class="question">97. Які основні причини перегріву електропроводки?</div>
+    <div class="answer">
+        Перевантаження мережі, погані контакти (скрутки), малий переріз кабелю.
+    </div>
+
+    <div class="question">98. Як вибирають переріз кабелю?</div>
+    <div class="answer">
+        Залежно від: розрахункового струму, потужності навантаження, матеріалу жил (мідь/алюміній) та способу прокладання.
+    </div>
+    <div class="page-num"></div>
+</div>
+
+<!-- СТОРІНКА 21 -->
+<div class="page">
+    <div class="question">99. Які основні причини втрат електроенергії в мережах?</div>
+    <div class="answer">
+        Нагрівання провідників, контактні опори, реактивна потужність, неякісні з'єднання.
+    </div>
+
+    <div class="question">100. Які основні закони електротехніки повинен знати електромонтер?</div>
+    <div class="answer">
+        Закон Ома, закони Кірхгофа, закон Джоуля—Ленца, закон електромагнітної індукції Фарадея та правила електробезпеки.
+    </div>
+
+    <div style="background:#0D47A1;color:white;padding:20px;border-radius:8px; margin-top: 40px;">
+        <h2 style="color:white;margin-top:0;">Підсумок підручника</h2>
+        <p>Ви ознайомилися зі 100 основними питаннями електротехніки, що охоплюють:</p>
+        <ul>
+            <li>основні електричні величини та закони;</li>
+            <li>електричні кола та мережі;</li>
+            <li>магнетизм, трансформатори та машини;</li>
+            <li>електробезпеку.</li>
+        </ul>
+        <p style="font-size:18px;text-align:center;">
+            <strong>Бажаємо успіхів у навчанні та безпечної роботи!</strong>
+        </p>
+    </div>
+
+    <div class="footer">Кінець підручника • 100 запитань та відповідей</div>
+    <div class="page-num"></div>
+</div>
+
+</body>
+</html>
